@@ -239,6 +239,21 @@ body {
   outline-offset: 3px;
 }
 
+/* ---------- Document buttons (CV / press kit) ---------- */
+.docs { margin-top: 12px; }
+.docs .link-btn { font-size: 1.1rem; }
+.play.doc svg {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke .35s;
+}
+@media (hover: hover) {
+  .link-btn:hover .play.doc svg { fill: none; stroke: var(--charcoal); }
+}
+
 /* ---------- Share ---------- */
 .share-btn {
   display: inline-flex;
@@ -267,6 +282,25 @@ body {
   text-shadow: 0 1px 6px rgba(0, 0, 0, .8);
 }
 .footer p { margin: 0; }
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin: 18px 0 0;
+  font-size: 1rem;
+  animation: rise .9s var(--ease) 1.78s both;
+}
+.contact span { color: var(--ivory-dim); }
+.contact a {
+  color: var(--gold);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s, color .3s;
+}
+.contact a:hover,
+.contact a:focus-visible { color: var(--ivory); border-color: var(--gold-line); outline: none; }
 
 /* ---------- Toast ---------- */
 .toast {
@@ -312,8 +346,10 @@ body {
 .description { animation: rise .9s var(--ease) 1.08s both; }
 .link-btn:nth-child(1) { animation: rise .9s var(--ease) 1.22s both; }
 .link-btn:nth-child(2) { animation: rise .9s var(--ease) 1.36s both; }
-.share-btn { animation: rise .9s var(--ease) 1.5s both; }
-.footer { animation: rise .9s var(--ease) 1.6s both; }
+.docs .link-btn:nth-child(1) { animation: rise .9s var(--ease) 1.5s both; }
+.docs .link-btn:nth-child(2) { animation: rise .9s var(--ease) 1.64s both; }
+.share-btn { animation: rise .9s var(--ease) 1.9s both; }
+.footer { animation: rise .9s var(--ease) 2s both; }
 
 /* ---------- Larger screens ---------- */
 @media (min-width: 768px) {
